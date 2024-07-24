@@ -37,17 +37,33 @@ const questions = [
     },
     {
       question: "What is the largest mammal?",
-      options: ["Elephant", "Blue Whale", "Giraffe", "Human"],
+      answers: ["Elephant", "Blue Whale", "Giraffe", "Human"],
       correctAnswer: "Blue Whale"
     }
   ];
-const displayOptions = () => {
+function displayQuestions (questionObj) {
 };
+function getUserAnswer() {
+  let answer;
+  do {
+    answer = prompt()
+  }
+}
 document.getElementById("questionButton").addEventListener("click", () => {
   document.getElementById("questionDisplay").textContent = question;
 });
 const resultDisplayEl = document.querySelector('#result-display');
-
+const displayQuestion = (index) => {
+  const questionObj = questions[index];
+  const questionText = questionObj.question;
+  const answersArray = questionObj.answers;
+};
+document.querySelectorAll('.card button').forEach(button => {
+  button.addEventListener("click", (event) => {
+      const index = event.target.getAttribute('data-index'); 
+      displayQuestion(index); 
+  });
+});
 /*-------------------------------- Variables --------------------------------*/
 let playerChoice;
 let message;
@@ -68,3 +84,6 @@ function determineWinner() {
 function intializeGame() {
 }
 /*----------------------------- Event Listeners -----------------------------*/
+document.querySelector('Card 1').addEventListener('click');
+document.querySelector('Card 2').addEventListener('click', Card);
+document.querySelector('Card 3').addEventListener('click', Card);
