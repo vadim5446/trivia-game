@@ -20,7 +20,7 @@
 // 6) Render a win/lose message to the player 
 //    Include both player and computer selections in the message
 //    Clearly indicate who won
-/*-------------------------------- Constants --------------------------------*/
+
 
 /*-------------------------------- Constants --------------------------------*/
 
@@ -43,13 +43,17 @@ const questions = [
   ];
 const displayOptions = () => {
 };
+document.getElementById("questionButton").addEventListener("click", () => {
+  document.getElementById("questionDisplay").textContent = question;
+});
+const resultDisplayEl = document.querySelector('#result-display');
 
+/*-------------------------------- Variables --------------------------------*/
 let playerChoice;
 let message;
-/*-------------------------------- Variables --------------------------------*/
-
 /*------------------------ Cached Element References ------------------------*/
-
+const display  = document.getElementById('result-display')
+const cardButtons = document.querySelectorAll('.card button')
 /*-------------------------------- Functions --------------------------------*/
 
 function determineWinner() {
@@ -64,6 +68,3 @@ function determineWinner() {
 function intializeGame() {
 }
 /*----------------------------- Event Listeners -----------------------------*/
- let card1 = document.querySelector('#Card 1').addEventListener('click', play);
- let card2 = document.querySelector('#Card 2').addEventListener('click', play);
-let card3  = document.querySelector('#Card 3').addEventListener('click', play);
