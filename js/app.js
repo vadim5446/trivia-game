@@ -21,7 +21,11 @@
 //    Include both player and computer selections in the message
 //    Clearly indicate who won
 /*-------------------------------- Constants --------------------------------*/
+const Card 
+
+const
 /*-------------------------------- Constants --------------------------------*/
+
 const questions = [
     {
       question: "What is the capital of France?",
@@ -41,7 +45,7 @@ const questions = [
   ];
 const displayOptions = () => {
 };
-const options = ['Card 1', 'Card 2', 'Card 3'];
+const choices = ['Card 1', 'Card 2', 'Card 3'];
 
 let playerChoice;
 let message;
@@ -51,8 +55,9 @@ let message;
 
 /*-------------------------------- Functions --------------------------------*/
 function getRandomChoice() {
-    const randomIndex = Math.floor(Math.random() * options.length);
-    return options[randomIndex];
+    const choices = ['Card 1', 'Card 2', 'Card 3'];
+    const randomIndex = Math.floor(Math.random() * choices.length);
+    return choicess[randomIndex];
 }
 function determineWinner() {
     if (playerChoice === )
@@ -60,6 +65,7 @@ function determineWinner() {
 } else {
     return "You Lost!"
 }
+
 
 function intializeGame() {
 }
