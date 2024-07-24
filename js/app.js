@@ -21,9 +21,7 @@
 //    Include both player and computer selections in the message
 //    Clearly indicate who won
 /*-------------------------------- Constants --------------------------------*/
-const Card 
 
-const
 /*-------------------------------- Constants --------------------------------*/
 
 const questions = [
@@ -45,7 +43,6 @@ const questions = [
   ];
 const displayOptions = () => {
 };
-const choices = ['Card 1', 'Card 2', 'Card 3'];
 
 let playerChoice;
 let message;
@@ -54,22 +51,19 @@ let message;
 /*------------------------ Cached Element References ------------------------*/
 
 /*-------------------------------- Functions --------------------------------*/
-function getRandomChoice() {
-    const choices = ['Card 1', 'Card 2', 'Card 3'];
-    const randomIndex = Math.floor(Math.random() * choices.length);
-    return choicess[randomIndex];
-}
+
 function determineWinner() {
-    if (playerChoice === )
+    if (playerChoice === questions.correctAnswers) {
         return "You Won!";
 } else {
     return "You Lost!"
+}
 }
 
 
 function intializeGame() {
 }
 /*----------------------------- Event Listeners -----------------------------*/
-document.querySelector('#Card 1').addEventListener('click', play);
-document.querySelector('#Card 2').addEventListener('click', play);
-document.querySelector('#Card 3').addEventListener('click', play);
+ let card1 = document.querySelector('#Card 1').addEventListener('click', play);
+ let card2 = document.querySelector('#Card 2').addEventListener('click', play);
+let card3  = document.querySelector('#Card 3').addEventListener('click', play);
