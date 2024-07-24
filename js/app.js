@@ -20,3 +20,41 @@
 // 6) Render a win/lose message to the player 
 //    Include both player and computer selections in the message
 //    Clearly indicate who won
+/*-------------------------------- Constants --------------------------------*/
+/*-------------------------------- Constants --------------------------------*/
+const questions = [
+    {
+      question: "What is the capital of France?",
+      answers: ["Berlin", "Madrid", "Paris", "Rome"],
+      correctAnswer: "Paris"
+    },
+    {
+      question: "Which planet is known as the Red Planet?",
+      answers: ["Earth", "Jupiter", "Mars", "Saturn"],
+      correctAnswer: "Mars"
+    },
+    {
+      question: "What is the largest mammal?",
+      options: ["Elephant", "Blue Whale", "Giraffe", "Human"],
+      correctAnswer: "Blue Whale"
+    }
+  ];
+const displayOptions = () => {
+};
+const options = ['Card 1', 'Card 2', 'Card 3'];
+
+let playerChoice;
+let message;
+/*-------------------------------- Variables --------------------------------*/
+
+/*------------------------ Cached Element References ------------------------*/
+
+/*-------------------------------- Functions --------------------------------*/
+function getRandomChoice() {
+    const randomIndex = Math.floor(Math.random() * options.length);
+    return options[randomIndex];
+}
+/*----------------------------- Event Listeners -----------------------------*/
+document.querySelector('#Card 1').addEventListener('click', play);
+document.querySelector('#Card 2').addEventListener('click', play);
+document.querySelector('#Card 3').addEventListener('click', play);
