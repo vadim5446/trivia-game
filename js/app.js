@@ -54,6 +54,15 @@ function getRandomChoice() {
     const randomIndex = Math.floor(Math.random() * options.length);
     return options[randomIndex];
 }
+function determineWinner() {
+    if (playerChoice === )
+        return "You Won!";
+} else {
+    return "You Lost!"
+}
+
+function intializeGame() {
+}
 /*----------------------------- Event Listeners -----------------------------*/
 document.querySelector('#Card 1').addEventListener('click', play);
 document.querySelector('#Card 2').addEventListener('click', play);
