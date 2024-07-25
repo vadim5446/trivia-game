@@ -41,17 +41,31 @@ const questions = [
       correctAnswer: "Blue Whale"
     }
   ];
-function displayQuestions (questionObj) {
+const displayQuestions = (index) => {
+  const questionObj = questions[index];
+  const questionEl = document.querySelectorAll('.question')[index];
+  const optionsEl = document.querySelectorAll('.options')[index];
+
+  questionEl.textContent = questionObj.question;
+
+  optionsEl.innerHTML = '';
+    questionObj.answers.forEach(answer => {
+        const button = document.createElement('button');
+        button.textContent = answer;
+        button.addEventListener('click', () => checkAnswer(index, answer));
+        optionsEl.appendChild(button);
+    });
 };
+
 function getUserAnswer() {
   let answer;
   do {
     answer = prompt()
   }
 }
-document.getElementById("questionButton").addEventListener("click", () => {
-  document.getElementById("questionDisplay").textContent = question;
-});
+// document.getElementById("questionButton").addEventListener("click", () => {
+//   document.getElementById("questionDisplay").textContent = question;
+//});
 const resultDisplayEl = document.querySelector('#result-display');
 const displayQuestion = (index) => {
   const questionObj = questions[index];
